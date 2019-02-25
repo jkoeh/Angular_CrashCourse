@@ -1,26 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses.component';
-import { ComComponent } from './com/com.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthorService } from './author.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { InputFormComponent } from './inputform/inputform.component';
+import { TitlePipe } from './title.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent,
-    ComComponent,
-    AuthorComponent
+    AuthorComponent,
+    FavoriteComponent,
+    InputFormComponent,
+    TitlePipe
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FormsModule
   ],
   providers: [AuthorService],
   bootstrap: [AppComponent]
