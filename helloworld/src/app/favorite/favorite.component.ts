@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent  {
-  isFavorite: boolean;
-  icontype: string;
+  //using an alias prevent changes in the component class from affect the clients
+  @Input('isFavorite') isSelected: boolean;
+  @Output('change') click = new EventEmitter();
   onClick(){    
-    this.isFavorite = !this.isFavorite;    
+    this.isSelected = !this.isSelected; 
+    this.click.emit({newValue: this.isSelected} );   
   }
-
+}
+export interface FavoriteChangedEventArgs{
+  newValue: boolean
 }

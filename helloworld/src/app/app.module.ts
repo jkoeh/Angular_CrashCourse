@@ -8,6 +8,8 @@ import { AuthorService } from './author.service';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { InputFormComponent } from './inputform/inputform.component';
 import { TitlePipe } from './title.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { TitlePipe } from './title.pipe';
     AuthorComponent,
     FavoriteComponent,
     InputFormComponent,
-    TitlePipe
+    TitlePipe,
+    PanelComponent,
+    LikeComponent
     
   ],
   imports: [

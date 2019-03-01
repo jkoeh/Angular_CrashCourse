@@ -1,0 +1,14 @@
+<!-- if statement, will render if true -->
+<div *ngIf="isLiked">ifIsLiked</div>
+
+
+<!-- using a single template to do if else logic -->
+<div *ngIf="isLiked; else noLike">ifElseIsLiked</div>
+<ng-template #noLike>no like</ng-template>
+
+<!-- we could also use multiple template to do if else -->
+<div *ngIf="isLiked; then multiLike else multiNoLike"></div>
+<ng-template #multiLike>very like</ng-template>
+<ng-template #multiNoLike>very no like</ng-template>
+
+
